@@ -1,40 +1,14 @@
 extends layout
 
 block content
-  h1= 'Whatcya got on tap?'
-  p Check out the tap list:
-  ol
-    li Citra Pale Ale
+  h1= 'Whatchya got on tap?'
+  .container
+    each recipe in recipes
+      div.item!= recipe
 
-    li Empty
-        #container
-          .recipe
-            .recipe-name
-            .abv
-            .ibu
-            .grains
-              ul
-                li Pale 2-row
-                li Honey Malt
-            .hops
-              ul
-                li 
-          .pour
-          #beaker
-            .beer-foam
-              .foam-1
-              .foam-2
-              .foam-3
-              .foam-4
-              .foam-5
-              .foam-6
-              .foam-7
-          #liquid
-            .bubble.bubble1
-            .bubble.bubble2
-            .bubble.bubble3
-            .bubble.bubble4
-            .bubble.bubble5
+block append scripts
+  script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+  script(src='/javascripts/menu/menu.js')
 
 block append styles
   link(rel='stylesheet', href='/stylesheets/menu.css')

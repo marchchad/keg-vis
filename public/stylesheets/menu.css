@@ -1,35 +1,129 @@
-#container {
-  height: 200px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  width: 180px;
+.container{
+  display: flex;
+  overflow: auto;
+  height: calc(100% - 90px);
+  padding: 5px 20px;
+  box-sizing: border-box;
 }
 
-#container div { position: absolute; }
+.item{
+  flex: 1 100%;
+  margin: 0 5px;
+}
+
+.item ul,
+.item ol{
+  list-style-type: none;
+  margin: 0;
+}
+
+.recipe{
+  overflow: auto;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px #888;
+  background-color: rgba(255,255,255, 0.6);
+  box-sizing: border-box;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5{
+  margin: 25px;
+  display: inline-block;
+  text-align: center;
+}
+
+.recipe{
+  min-width: 350px;
+}
+
+.recipe h2,
+.recipe h3,
+.recipe h4,
+.recipe h5{
+  margin: 10px;
+}
+
+.pourData p{
+  margin: 5px;
+}
+
+.beer {
+  height: 225px;
+  margin-left: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+}
+
+.beer > div {
+  position: absolute;
+}
+
+.recipeDetails{
+  position: relative;
+  height: 100%;
+  width: calc(100% - 200px);
+  clear: both;
+  margin-left: 15px;
+}
+
+.recipeDetails label,
+.recipeDetails ul{
+  float: left;
+  clear: both;
+}
+
+.recipeDetails ul{
+  padding: 5px;
+  width: 100%;
+}
+
+.recipe-detail{
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  padding: 3px;
+  margin-left: 5px;
+}
+
+.grains input,
+.hops input{
+  clear: both;
+}
+
+.hops .left,
+.grains .left {
+    clear: both;
+}
+
+.grains *,
+.hops *{
+  margin-left: 7.5px;
+}
 
 .pour {
   position: absolute;
   left: 45%;
   width: 20px;
   height: 0px;
-  background-color: #edaf32;
   border-radius: 10px
 }
 
-#beaker {
+.beaker {
   border: 5px solid #eee;
   border-top: 0;
   border-radius: 0 0 30px 30px;
   height: 90%;
-  left: 26px;
   bottom: 0;
   width: 140px;
 }
 
 /*
-#beaker:before,
-#beaker:after {
+.beaker:before,
+.beaker:after {
   border: 10px solid #ccc;
   border-bottom: 0;
   border-radius: 15px 15px 0 0;
@@ -40,24 +134,23 @@
   width: 15px;
 }
 
-#beaker:before { 
+.beaker:before { 
   left: -35px;
 }
-#beaker:after {
+.beaker:after {
   right: -35px;
 }
 */
 
-#liquid {
+.liquid {
   height: 90%;
   overflow: hidden;
   width: 140px;
-  position: relative;
   box-sizing: border-box;
-  background-color: #edaf32;
-  border: 10px solid #edaf32;
+  border-style: solid;
+  border-width: 10px;
   border-radius: 0 0 25px 25px;
-  left: 31px;
+  left: 5px;
   bottom: 4px;
   -webkit-animation-name: fillup;
   -webkit-animation-timing-function: linear;
@@ -78,7 +171,7 @@
   }
 }
 
-#liquid:after {
+.liquid:after {
   background-color: rgba(255, 255, 255, 0.25);
   bottom: -10px;
   content: '';
@@ -90,7 +183,7 @@
   width: 110px;
 }
 
-#liquid .bubble {
+.liquid .bubble {
   -webkit-animation-name: bubble;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -144,6 +237,7 @@
 /* Foam */
 
 .beer-foam {
+  position: absolute;
   bottom: 90%;
   -webkit-animation-name: grow;
   -webkit-animation-iteration-count: 1;
@@ -334,3 +428,81 @@
 	animation-name: drunk;
 }
 */
+
+.srm-1{
+  background-color: #FFE699;
+  border-color: #FFE699;
+}
+
+.srm-2{
+  background-color: #FFD878;
+  border-color: #FFD878;
+}
+
+.srm-3{
+  background-color: #FFD878;
+  border-color: #FFD878;
+}
+
+.srm-4{
+  background-color: #FFBF42;
+  border-color: #FFBF42;
+}
+
+.srm-5{
+  background-color: #FBB123;
+  border-color: #FBB123;
+}
+
+.srm-6{
+  background-color: #F8A600;
+  border-color: #F8A600;
+}
+
+.srm-7{
+  background-color: #F39C00;
+  border-color: #F39C00;
+}
+
+.srm-8{
+  background-color: #EA8F00;
+  border-color: #EA8F00;
+}
+
+.srm-9{
+  background-color: #E58500;
+  border-color: #E58500;
+}
+
+/*
+#DE7C00 -> 10 
+#D77200 -> 11 
+#CF6900 -> 12 
+#CB6200 -> 13 
+#C35900 -> 14 
+#BB5100 -> 15 
+#B54C00 -> 16 
+#B04500 -> 17
+#A63E00 -> 18
+#A13700 -> 19
+#9B3200 -> 20
+#952D00 -> 21
+#8E2900 -> 22
+#882300 -> 23
+#821E00 -> 24
+#7B1A00 -> 25
+#771900 -> 26
+#701400 -> 27
+#6A0E00 -> 28
+#660D00 -> 29
+#5E0B00 -> 30
+#5A0A02 -> 31
+#600903 -> 32
+#520907 -> 33
+#4C0505 -> 34
+#470606 -> 35
+#440607 -> 36
+#3F0708 -> 37
+#3B0607 -> 38
+#3A070B -> 39
+#36080A -> 40*/
