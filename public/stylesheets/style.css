@@ -93,6 +93,13 @@ body::after{
   position: absolute;
 }
 
+.container{
+  overflow: auto;
+  height: calc(100% - 90px);
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+
 .btn-default{
   border: none;
 }

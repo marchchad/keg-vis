@@ -1,9 +1,5 @@
 .container{
   display: flex;
-  overflow: auto;
-  height: calc(100% - 90px);
-  padding: 5px 20px;
-  box-sizing: border-box;
 }
 
 .item{
